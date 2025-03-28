@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #68A27C;
+    --color-secondary: #F1F0F0;
+    --color-active: #8DC172;
+}
+
+html,
+body,
+#root {
+    @apply w-full h-full;
+}
