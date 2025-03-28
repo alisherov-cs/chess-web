@@ -113,11 +113,11 @@ export class Rook extends Piece {
     }
 
     // right
-    for (let i = y + 1; i <= 8; i++) {
+    for (let i = y + 1; i < 8; i++) {
       if (
         board.pieces.some(
           ({ position, color }) =>
-            checkPositions(position, [i, y]) && i !== x && this.color === color
+            checkPositions(position, [x, i]) && i !== y && this.color === color
         )
       ) {
         break;
@@ -138,7 +138,7 @@ export class Rook extends Piece {
       if (
         board.pieces.some(
           ({ position, color }) =>
-            checkPositions(position, [i, y]) && i !== x && this.color === color
+            checkPositions(position, [x, i]) && i !== y && this.color === color
         )
       ) {
         break;

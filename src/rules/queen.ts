@@ -144,7 +144,7 @@ export class Queen extends Piece {
     }
 
     // down
-    for (let i = x + 1; i <= 8; i++) {
+    for (let i = x + 1; i < 8; i++) {
       if (
         board.pieces.some(
           ({ position, color }) =>
@@ -165,11 +165,11 @@ export class Queen extends Piece {
     }
 
     // right
-    for (let i = y + 1; i <= 8; i++) {
+    for (let i = y + 1; i < 8; i++) {
       if (
         board.pieces.some(
           ({ position, color }) =>
-            checkPositions(position, [i, y]) && i !== x && this.color === color
+            checkPositions(position, [x, i]) && i !== y && this.color === color
         )
       ) {
         break;
@@ -190,7 +190,7 @@ export class Queen extends Piece {
       if (
         board.pieces.some(
           ({ position, color }) =>
-            checkPositions(position, [i, y]) && i !== x && this.color === color
+            checkPositions(position, [x, i]) && i !== y && this.color === color
         )
       ) {
         break;
@@ -223,7 +223,7 @@ export class Queen extends Piece {
     }
 
     // up-right
-    for (let i = x - 1, j = y + 1; i >= 0 && j <= 8; i--, j++) {
+    for (let i = x - 1, j = y + 1; i >= 0 && j < 8; i--, j++) {
       if (
         board.pieces.some(
           ({ position, color }) =>
@@ -239,7 +239,7 @@ export class Queen extends Piece {
     }
 
     // down-left
-    for (let i = x + 1, j = y - 1; i <= 8 && j >= 0; i++, j--) {
+    for (let i = x + 1, j = y - 1; i < 8 && j >= 0; i++, j--) {
       if (
         board.pieces.some(
           ({ position, color }) =>
@@ -255,7 +255,7 @@ export class Queen extends Piece {
     }
 
     // down-right
-    for (let i = x + 1, j = y + 1; i <= 8 && j <= 8; i++, j++) {
+    for (let i = x + 1, j = y + 1; i < 8 && j < 8; i++, j++) {
       if (
         board.pieces.some(
           ({ position, color }) =>

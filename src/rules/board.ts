@@ -7,6 +7,7 @@ import { Queen } from "./queen";
 import { Rook } from "./rook";
 
 export class Board {
+  public turn: Color = Color.WHITE;
   constructor() {}
 
   public pieces: Piece[] = [

@@ -122,7 +122,7 @@ export const ChessBoard = () => {
 
   return (
     <DndContext onDragStart={onDragStart} onDragEnd={onDragEnd}>
-      <div className="grid grid-rows-8 w-[600px] aspect-square">
+      <div className="grid grid-rows-8 w-[600px] aspect-square select-none">
         {[...Array(8).keys()].map((row) => (
           <div className="grid grid-cols-8" key={row}>
             {[...Array(8).keys()].map((col) => (
